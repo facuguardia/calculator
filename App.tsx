@@ -1,19 +1,14 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
 import CalculatorScreen from './src/screens/CalculatorScreen';
+import {styles} from './src/theme/appTheme';
 
 function App() {
   return (
-    <View style={styles.container}>
-      <SafeAreaView />
+    <SafeAreaView style={styles.background}>
+      <StatusBar backgroundColor={'black'} barStyle={'light-content'} />
       <CalculatorScreen />
-    </View>
+    </SafeAreaView>
   );
 }
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
